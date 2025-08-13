@@ -1,7 +1,3 @@
-Вот расширенная версия README с полноценным разделом по настройке Waybar:
-
----
-
 # RClone Automation System
 
 This project provides a system for automating **RClone** synchronization.
@@ -42,28 +38,29 @@ This system includes a Waybar module to display the current synchronization stat
 
 ```bash
 mkdir -p ~/.config/waybar/modules/rclone_sync
-cp path/to/rclone_sync_waybar.sh ~/.config/waybar/modules/rclone_sync/
+cp waybar_rclone.sh ~/.config/waybar/modules/rclone_sync/
 ```
 
 2. Make sure the script is executable:
 
 ```bash
-chmod +x ~/.config/waybar/modules/rclone_sync/rclone_sync_waybar.sh
+chmod +x ~/.config/waybar/modules/rclone_sync/waybar_rclone.sh
 ```
 
 3. Add the module to your Waybar configuration (`~/.config/waybar/config`):
 
 ```json
-"modules-right": ["custom/rclone_sync"], // can change to any group
+// can change to any group
+"modules-right": ["custom/rclone_sync"],
 
 "custom/rclone_sync": {
     "return-type": "json",
-    "exec": "~/.config/waybar/modules/rclone_sync/rclone_sync_waybar.sh status",
+    "exec": "~/.config/waybar/modules/rclone_sync/waybar_rclone.sh status",
     "interval": 5,
     "signal": 8,
     "tooltip": true,
-    "on-click": "~/.config/waybar/modules/rclone_sync/rclone_sync_waybar.sh sync",
-    "on-click-right": "~/.config/waybar/modules/rclone_sync/rclone_sync_waybar.sh toggle-sync"
+    "on-click": "~/.config/waybar/modules/rclone_sync/waybar_rclone.sh sync",
+    "on-click-right": "~/.config/waybar/modules/rclone_sync/waybar_rclone.sh toggle-sync"
 }
 ```
 
