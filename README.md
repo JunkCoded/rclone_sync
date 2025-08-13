@@ -44,7 +44,7 @@ cp path/to/rclone_sync_waybar.sh ~/.config/waybar/modules/rclone_sync/
 2. Make sure the script is executable:
 
 ```bash
-chmod +x ~/.config/waybar/modules/rclone_sync/rclone_sync_waybar.sh
+chmod +x ~/.config/waybar/modules/rclone_sync/waybar_rclone.sh
 ```
 
 3. Add the module to your Waybar configuration (`~/.config/waybar/config`):
