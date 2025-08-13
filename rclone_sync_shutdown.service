@@ -1,0 +1,19 @@
+[Unit]
+Description=User Rclone sync on shutdown
+DefaultDependencies=no
+Before=shutdown.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c '\
+for u in $(who | awk "{print \$1}" | sort -u); do \
+    homedir=$(eval echo "~$u"); \
+    if [[ -x "$homedir/.rclone_sync/start_sync.sh" ]]; then \
+        sudo -u "$u" "$homedir/.rclone_sync/start_sync.sh" || echo "Sync failed for $u"; \
+    fi; \
+done'
+TimeoutStartSec=2min
+
+[Install]
+WantedBy=shutdown.target
