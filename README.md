@@ -50,7 +50,8 @@ chmod +x ~/.config/waybar/modules/rclone_sync/rclone_sync_waybar.sh
 3. Add the module to your Waybar configuration (`~/.config/waybar/config`):
 
 ```json
-"modules-right": ["custom/rclone_sync"], // can change to any group
+// can change to any group
+"modules-right": ["custom/rclone_sync"],
 
 "custom/rclone_sync": {
     "return-type": "json",
