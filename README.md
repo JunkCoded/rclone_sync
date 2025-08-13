@@ -38,7 +38,7 @@ This system includes a Waybar module to display the current synchronization stat
 
 ```bash
 mkdir -p ~/.config/waybar/modules/rclone_sync
-cp path/to/rclone_sync_waybar.sh ~/.config/waybar/modules/rclone_sync/
+cp waybar_rclone.sh ~/.config/waybar/modules/rclone_sync/
 ```
 
 2. Make sure the script is executable:
@@ -55,12 +55,12 @@ chmod +x ~/.config/waybar/modules/rclone_sync/waybar_rclone.sh
 
 "custom/rclone_sync": {
     "return-type": "json",
-    "exec": "~/.config/waybar/modules/rclone_sync/rclone_sync_waybar.sh status",
+    "exec": "~/.config/waybar/modules/rclone_sync/waybar_rclone.sh status",
     "interval": 5,
     "signal": 8,
     "tooltip": true,
-    "on-click": "~/.config/waybar/modules/rclone_sync/rclone_sync_waybar.sh sync",
-    "on-click-right": "~/.config/waybar/modules/rclone_sync/rclone_sync_waybar.sh toggle-sync"
+    "on-click": "~/.config/waybar/modules/rclone_sync/waybar_rclone.sh sync",
+    "on-click-right": "~/.config/waybar/modules/rclone_sync/waybar_rclone.sh toggle-sync"
 }
 ```
 
