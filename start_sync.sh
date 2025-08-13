@@ -13,7 +13,8 @@ COMMAND="rclone bisync \"$LOCAL_DIR\" \"${REMOTE_NAME}:${REMOTE_PATH}\" \
     --backup-dir1 \"$LOCAL_BACKUP_DIR\" \
     --backup-dir2 \"${REMOTE_NAME}:${REMOTE_BACKUP_DIR}\" \
     --conflict-resolve newer \
-    --conflict-loser pathname \
+    --conflict-loser delete \
+    --compare size,modtime,checksum
     --resilient \
     --recover \
     --check-sync true \
