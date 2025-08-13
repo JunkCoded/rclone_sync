@@ -1,7 +1,3 @@
-Вот расширенная версия README с полноценным разделом по настройке Waybar:
-
----
-
 # RClone Automation System
 
 This project provides a system for automating **RClone** synchronization.
