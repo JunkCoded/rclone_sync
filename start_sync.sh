@@ -6,13 +6,7 @@
 
 set -euo pipefail
 
-LOCAL_USER="apc"
-LOCAL_DIR="/home/$LOCAL_USER/SyncArea"
-REMOTE_NAME="drive"
-REMOTE_PATH="SyncArea"
-LOCAL_BACKUP_DIR="/home/$LOCAL_USER/SyncArea-backup"
-REMOTE_BACKUP_DIR="SyncArea-backup"
-LOG_FILE="/home/$LOCAL_USER/.SyncArea.log"
+source "$HOME/.rclone_sync/.env"
 
 # Base command
 COMMAND="rclone bisync \"$LOCAL_DIR\" \"${REMOTE_NAME}:${REMOTE_PATH}\" \
