@@ -1,0 +1,22 @@
+#custom-rclone_sync {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+}
+/* #custom-rclone_sync.synced {
+    color: #5cb85c; 
+} */
+#custom-rclone_sync.syncing {
+    color: #f0ad4e;
+    animation: pulse 1s infinite;
+}
+#custom-rclone_sync.error {
+    color: #d9534f;
+}
+#custom-rclone_sync.disabled {
+    color: #9e9e9e;
+}
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
